@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+@font-face {
+  font-family: "Avenir Next LT Pro";
+  font-style: normal;
+  font-weight: 400;
+  src: url("avenir-next-lt-pro/AvenirNextLTPro-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Avenir Next LT Pro";
+  font-style: normal;
+  font-weight: 600;
+  src: url("avenir-next-lt-pro/AvenirNextLTPro-Demi.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Avenir Next LT Pro";
+  font-style: normal;
+  font-weight: 700;
+  src: url("avenir-next-lt-pro/AvenirNextLTPro-Bold.woff") format("woff");
+}
+
+.avenir-regular {
+  font-family: "Avenir Next LT Pro", sans-serif;
+  font-weight: 400;
+}
+.avenir-semi-bold {
+  font-family: "Avenir Next LT Pro", sans-serif;
+  font-weight: 600;
+}
+.avenir-bold {
+  font-family: "Avenir Next LT Pro", sans-serif;
+  font-weight: 700;
+}
