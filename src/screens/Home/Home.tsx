@@ -1,12 +1,26 @@
-import { useDashboardContext } from "@/context/DashboardContext";
+import LoginForm from "@/components/home/loginForm/LoginForm";
+import loginImage from "@/assets/svg/pablo-sign-in.svg";
+import logo from "@/assets/svg/logo.svg";
+import styles from "./Home.module.scss";
 
 const Home = () => {
-  const { test, setTest } = useDashboardContext();
-
   return (
-    <div>
-      <h1 className="avenir-regular">Hello {test}</h1>
-    </div>
+    <section className={styles.home}>
+      <img src={logo} alt="logo" className={styles.logo} />
+      <div className={styles.container}>
+        <div className={styles.leftContainer}>
+          <img src={loginImage} alt="login" />
+        </div>
+
+        <div className={styles.rightContainer}>
+          <h1>Welcome!</h1>
+          <p>Enter details to login.</p>
+          <div className={styles.formContainer}>
+            <LoginForm />
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 

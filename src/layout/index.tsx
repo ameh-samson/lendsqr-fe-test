@@ -1,8 +1,8 @@
-import { ChildrenT } from "@/types";
+import { ChildrenType } from "@/types";
 import { FC } from "react";
 
-const Layout: FC<ChildrenT> = ({ children }) => {
-  return <div>{children}</div>;
+const Layout: FC<ChildrenType> = ({ children }) => {
+  return <main>{children}</main>;
 };
 
 export default Layout;
