@@ -18,3 +18,9 @@ export interface sidebarLinkType {
   title: string;
   icon: string;
 }
+
+export interface metricCardDataType {
+  image: string;
+  title: string;
+  value: number;
+}

@@ -1,0 +1,33 @@
+@use "@/scss/colors";
+
+.cardContainer {
+  background: white;
+  padding: 1.25em 1.88em;
+  border-radius: 4px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  max-width: 240px;
+  height: 160px;
+
+  img {
+    height: 40px;
+    width: 40px;
+  }
+
+  .title {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 0.88em;
+    color: colors.$secondary-color;
+    margin-block: 0.88em 0.75em;
+  }
+
+  .value {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: colors.$primary-color;
+  }
+}

@@ -21,5 +21,7 @@
   .mainContent {
     grid-area: main;
     overflow-y: auto;
+    padding-block: 3.75em 2em;
+    padding-inline: 3.75em 1.88em;
   }
 }
