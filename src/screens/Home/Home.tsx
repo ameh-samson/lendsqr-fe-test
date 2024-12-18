@@ -1,5 +1,5 @@
 import LoginForm from "@/components/home/loginForm/LoginForm";
-import loginImage from "@/assets/svg/pablo-sign-in.svg";
+import loginImage from "@/assets/png/pablo-sign-in.png";
 import logo from "@/assets/svg/logo.svg";
 import styles from "./Home.module.scss";
 

@@ -1,0 +1,61 @@
+@use "@/scss/colors";
+
+.form {
+  max-width: 447px;
+
+  .innerFormContainer {
+    margin-bottom: 1.5em;
+    position: relative;
+
+    input {
+      width: 100%;
+      padding: 1em;
+      border: 1px solid #545f7d26;
+      border-radius: 6px;
+      font-size: 0.88em;
+      color: colors.$secondary-color;
+      font-weight: 400;
+
+      &::placeholder {
+        color: colors.$secondary-color;
+      }
+    }
+
+    .showPassword {
+      position: absolute;
+      top: 50%;
+      right: 1em;
+      transform: translateY(-50%);
+      color: colors.$accent-color;
+      font-size: 0.9em;
+      cursor: pointer;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+  }
+
+  .forgotPassword {
+    color: colors.$accent-color !important;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    margin-bottom: 1.5em;
+    cursor: pointer;
+  }
+
+  .submitBtn {
+    background: colors.$accent-color;
+    padding: 0.8em 0;
+    width: 100%;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+
+    &:hover {
+      background: #33b6b6;
+    }
+  }
+}
