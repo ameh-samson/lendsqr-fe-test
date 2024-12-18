@@ -12,3 +12,9 @@ export interface AppContextType {
 }
 
 export type LoginFormType = z.infer<typeof loginFormSchema>;
+
+export interface sidebarLinkType {
+  href: string;
+  title: string;
+  icon: string;
+}

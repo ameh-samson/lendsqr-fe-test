@@ -22,6 +22,11 @@ img {
   object-fit: cover;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 ::-webkit-scrollbar {
   width: 12px;
 }
