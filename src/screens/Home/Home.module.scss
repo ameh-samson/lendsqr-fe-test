@@ -1,54 +1,5 @@
 @use "@/scss/colors";
 
-// .home {
-//   display: grid;
-//   place-content: center;
-//   height: 100dvh;
-//   padding: 0 2em;
-//   position: relative;
-
-//   .logo {
-//     width: 173px;
-//   }
-//   .container {
-//     margin-top: 4.6em;
-//     display: grid;
-//     grid-template-columns: repeat(2, 1fr);
-//     gap: 1.88em;
-
-//     .leftContainer {
-//       img {
-//         height: 100%;
-//         width: 100%;
-//         object-fit: cover;
-//       }
-//     }
-
-//     .rightContainer {
-//       background: colors.$white-color;
-
-//       display: flex;
-//       justify-content: center;
-//       flex-direction: column;
-
-//       h1 {
-//         font-size: 2.5em;
-//         font-family: "Avenir Next LT Pro Bold", sans-serif;
-//         color: colors.$primary-color;
-//       }
-
-//       p {
-//         margin-top: 0.31em;
-//         color: colors.$secondary-color;
-//       }
-
-//       .formContainer {
-//         margin-top: 1.8em; //60px
-//       }
-//     }
-//   }
-// }
-
 .container {
   display: flex;
   height: 100vh;
