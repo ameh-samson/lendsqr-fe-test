@@ -70,12 +70,14 @@
   }
 
   .sectionTitle {
+    display: block;
     text-transform: uppercase;
     font-weight: 500;
     font-size: 0.75em;
     display: block;
-    padding-inline: 1.88em;
+    padding-inline: calc(1.88em * (1 / 0.75));
     margin-bottom: 1.25em;
     color: colors.$primary-color;
+    box-sizing: border-box;
   }
 }

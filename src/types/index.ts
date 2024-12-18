@@ -6,9 +6,23 @@ export interface ChildrenType {
   children: ReactNode;
 }
 
+export interface UserType {
+  id: number;
+  email: string;
+  phone: string;
+  status: "Active" | "Inactive" | "Pending" | "Blacklisted";
+  username: string;
+  date_joined: string;
+  organization: string;
+  hasLoan: boolean;
+  hasSavings: boolean;
+}
+
 export interface AppContextType {
-  test: string;
-  setTest: React.Dispatch<React.SetStateAction<string>>;
+  data: UserType[];
+  activeUsers: UserType[];
+  usersWithLoans: UserType[];
+  usersWithSavings: UserType[];
 }
 
 export type LoginFormType = z.infer<typeof loginFormSchema>;

@@ -5,24 +5,35 @@ import activeUsersIcon from "@/assets/svg/active-users.svg";
 import usersWithLoanIcon from "@/assets/svg/active-users.svg";
 import usersWithSavingsIcon from "@/assets/svg/users-with-savings.svg";
 import { Link } from "react-router-dom";
+import { useDashboardContext } from "@/context/DashboardContext";
 
 const Dashboard = () => {
+  const { data, activeUsers, usersWithLoans, usersWithSavings } =
+    useDashboardContext();
+
   return (
     <section className={styles.dashboard}>
       <h1>Dashboard</h1>
 
       <div className={styles.metricCardContainer}>
-        <MetricCard image={usersIcon} title="Users" value={100} />
-        <MetricCard image={activeUsersIcon} title="Active Users" value={200} />
+        <MetricCard image={usersIcon} title="Users" value={data?.length} />
+
+        <MetricCard
+          image={activeUsersIcon}
+          title="Active Users"
+          value={activeUsers.length}
+        />
+
         <MetricCard
           image={usersWithLoanIcon}
           title="Users with Loans"
-          value={300}
+          value={usersWithLoans.length}
         />
+
         <MetricCard
           image={usersWithSavingsIcon}
           title="Users with Savings"
-          value={300}
+          value={usersWithSavings.length}
         />
       </div>
 
