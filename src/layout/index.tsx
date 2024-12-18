@@ -9,7 +9,7 @@ const Layout: FC<ChildrenType> = ({ children }) => {
   const location = useLocation();
   const loginPage = location.pathname === "/";
   return (
-    <div className={styles.layout}>
+    <div className={loginPage ? "" : styles.layout}>
       {!loginPage && <Header />}
       <div className={styles.content}>
         <div className={styles.sidebar}>{!loginPage && <Sidebar />}</div>

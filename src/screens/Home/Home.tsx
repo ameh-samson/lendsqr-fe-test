@@ -6,9 +6,9 @@ import styles from "./Home.module.scss";
 const Home = () => {
   return (
     <section className={styles.home}>
-      <img src={logo} alt="logo" className={styles.logo} />
       <div className={styles.container}>
         <div className={styles.leftContainer}>
+          <img src={logo} alt="logo" className={styles.logo} />
           <img src={loginImage} alt="login" />
         </div>
 
