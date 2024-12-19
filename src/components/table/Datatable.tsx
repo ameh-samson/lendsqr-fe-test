@@ -112,7 +112,7 @@ const Datatable = () => {
               {paginatedData?.map((user, index) => (
                 <tr key={index}>
                   <td>{user.organization}</td>
-                  <td>{user.username}</td>
+                  <td>{user.full_name}</td>
                   <td>{user.email}</td>
                   <td>{user.phone}</td>
                   <td>{user.date_joined}</td>

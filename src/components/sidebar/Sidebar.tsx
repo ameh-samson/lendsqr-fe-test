@@ -2,6 +2,8 @@ import styles from "./Sidebar.module.scss";
 import dropdown from "@/assets/svg/dropdown2.svg";
 import briefcase from "@/assets/svg/briefcase.svg";
 import home from "@/assets/svg/home.svg";
+import signoutIcon from "@/assets/svg/sign-out.svg";
+
 import { Link, useLocation } from "react-router-dom";
 import {
   businessesRelatedNavlink,
@@ -78,6 +80,14 @@ const Sidebar = () => {
             <span>{link.title}</span>
           </Link>
         ))}
+      </section>
+      <section className={styles.signoutSection}>
+        <button className={styles.signout}>
+          <img src={signoutIcon} alt="signout" />
+          <span>Logout</span>
+        </button>
+
+        <span>v1.2.0</span>
       </section>
     </aside>
   );

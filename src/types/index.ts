@@ -11,7 +11,7 @@ export interface UserType {
   email: string;
   phone: string;
   status: "Active" | "Inactive" | "Pending" | "Blacklisted";
-  username: string;
+  full_name: string;
   date_joined: string;
   organization: string;
   hasLoan: boolean;

@@ -6,7 +6,8 @@
 
   .organization,
   .dashboard,
-  .navLink {
+  .navLink,
+  .signout {
     display: flex;
     align-items: center;
     gap: 0.63em;
@@ -67,6 +68,21 @@
   .settings,
   .costumers {
     margin-top: 1.8em;
+  }
+
+  .signoutSection {
+    margin-top: 2.5em;
+
+    padding: 0.63em 1.88em;
+
+    button {
+      display: flex;
+      align-items: center;
+      color: inherit;
+      font-size: 1em;
+      padding: 0;
+      margin-bottom: 2.5em;
+    }
   }
 
   .sectionTitle {

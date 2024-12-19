@@ -19,6 +19,7 @@ import chartIcon from "@/assets/svg/chart-bar.svg";
 import preferenceIcon from "@/assets/svg/preference.svg";
 import pricingIcon from "@/assets/svg/pricing.svg";
 import auditLogIcon from "@/assets/svg/audit-log.svg";
+import tireIcon from "@/assets/svg/tire.svg";
 
 export const customersRelatedNavlink: sidebarLinkType[] = [
   {
@@ -126,5 +127,10 @@ export const settingsRelatedNavlink: sidebarLinkType[] = [
     href: "/audit-logs",
     title: "Audit Logs",
     icon: auditLogIcon,
+  },
+  {
+    href: "/systems-messages",
+    title: "Systems Messages",
+    icon: tireIcon,
   },
 ];
