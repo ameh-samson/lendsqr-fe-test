@@ -1,13 +1,20 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "./Datatable.module.scss";
 import { useDashboardContext } from "@/context/DashboardContext";
 import filter from "@/assets/svg/filter-results-button.svg";
 import actionDots from "@/assets/svg/action-dots.svg";
+import eyeIcon from "@/assets/svg/eye.svg";
+import blacklistIcon from "@/assets/svg/blacklist.svg";
+import activateIcon from "@/assets/svg/activate-user.svg";
 
 const Datatable = () => {
+  const [activeDropdownId, setActiveDropdownId] = useState<number | null>(null);
   const { data } = useDashboardContext();
   const [page, setPage] = useState(1);
   const [recordsPerPage, setRecordsPerPage] = useState(10);
+
+  const navigate = useNavigate();
 
   const startIndex = (page - 1) * recordsPerPage;
   const paginatedData = data?.slice(startIndex, startIndex + recordsPerPage);
@@ -45,6 +52,14 @@ const Datatable = () => {
   ) => {
     setRecordsPerPage(Number(event.target.value));
     setPage(1);
+  };
+
+  const toggleDropdown = (id: number) => {
+    setActiveDropdownId((prevId) => (prevId === id ? null : id));
+  };
+
+  const handleViewDetails = (userId: number) => {
+    navigate(`/user/${userId}`);
   };
 
   return (
@@ -104,10 +119,39 @@ const Datatable = () => {
                   <td className={styles[user.status.toLowerCase()]}>
                     {user.status}
                   </td>
-                  <td>
-                    <button className={styles.actionButton}>
+                  <td className={styles.action}>
+                    <button
+                      className={styles.actionButton}
+                      onClick={() => toggleDropdown(user.id)}
+                    >
                       <img src={actionDots} alt="" />
                     </button>
+
+                    {/* Dropdown */}
+                    <div
+                      className={`${
+                        activeDropdownId === user.id
+                          ? styles.actionDropdown
+                          : styles.hideActionDropdown
+                      }`}
+                    >
+                      <button
+                        onClick={() => {
+                          toggleDropdown(user.id);
+                          handleViewDetails(user.id);
+                        }}
+                      >
+                        <img src={eyeIcon} alt="" /> View Details
+                      </button>
+
+                      <button onClick={() => toggleDropdown(user.id)}>
+                        <img src={blacklistIcon} alt="" /> Blacklist User
+                      </button>
+
+                      <button onClick={() => toggleDropdown(user.id)}>
+                        <img src={activateIcon} alt="" /> Activate User
+                      </button>
+                    </div>
                   </td>
                 </tr>
               ))}
