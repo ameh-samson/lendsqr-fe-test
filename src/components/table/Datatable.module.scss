@@ -6,10 +6,11 @@ div {
     padding: 0.9em;
     border-radius: 4px;
     box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
 
     .table {
       overflow: auto;
-      height: 340px;
+      height: 50dvh;
 
       table {
         width: 100%;

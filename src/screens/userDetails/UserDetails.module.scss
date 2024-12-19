@@ -1,0 +1,49 @@
+@use "@/scss/colors";
+
+.userdetails {
+  .backButton {
+    display: flex;
+    align-items: center;
+    gap: 0.81em;
+
+    color: #545f7d;
+
+    img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  .userdetailsHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-block: 1.63em 2.5em;
+
+    h1 {
+      color: colors.$primary-color;
+      font-size: 1.5em;
+      font-weight: 500;
+    }
+
+    div {
+      button {
+        padding: 0.63em 1em;
+        border-radius: 8px;
+        font-size: 0.88em;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+      button:nth-child(1) {
+        color: #e4033b;
+        border: 1px solid #e4033b;
+      }
+      button:nth-child(2) {
+        margin-left: 1.25em;
+        color: #39cdcc;
+        border: 1px solid #39cdcc;
+      }
+    }
+  }
+}
