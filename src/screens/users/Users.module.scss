@@ -1,6 +1,10 @@
 @use "@/scss/colors";
 
 .users {
+  display: grid;
+  grid-template-rows: 50px 1fr;
+  overflow: hidden;
+
   h1 {
     color: colors.$primary-color;
     font-size: 1.5em;
@@ -8,9 +12,8 @@
     margin-bottom: 2.5em;
   }
 
-  .metricCardContainer {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.56em;
+  .datatableContainer {
+    width: 100%;
+    overflow: hidden;
   }
 }

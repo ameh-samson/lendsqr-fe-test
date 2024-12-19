@@ -1,0 +1,115 @@
+div {
+  .datatableContainer {
+    background: #fff;
+    padding: 0.9em;
+    border-radius: 4px;
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.1);
+
+    .table {
+      overflow: auto;
+      height: 340px;
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+
+        thead {
+          font-size: 12px;
+          position: sticky;
+          top: 0;
+          height: 16px;
+        }
+
+        th,
+        td {
+          color: #545f7d;
+          text-align: left;
+          padding: 12px;
+          border-bottom: 1px solid #ddd;
+        }
+
+        th {
+          background: white;
+          font-weight: 600;
+          text-transform: uppercase;
+
+          div {
+            display: flex;
+            align-items: center;
+            gap: 0.63em;
+
+            img {
+              width: 14px;
+              height: 14px;
+            }
+          }
+        }
+
+        tbody {
+          font-size: 14px;
+        }
+
+        .inactive {
+          color: #545f7d;
+        }
+
+        .pending {
+          color: #e9b200;
+        }
+
+        .active {
+          color: #39cd62;
+        }
+
+        .blacklisted {
+          color: #e4033b;
+        }
+      }
+    }
+
+    .actionButton {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+  }
+
+  .paginationContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.25em;
+    color: #545f7d;
+
+    .pagination {
+      display: flex;
+      justify-content: right;
+      align-items: center;
+
+      button {
+        padding: 8px 12px;
+        margin: 0 4px;
+        background: none;
+        cursor: pointer;
+        color: #545f7d;
+
+        &.active {
+          background: #247b7b;
+          color: #fff;
+        }
+      }
+
+      .page-number {
+        padding: 8px 12px;
+        margin: 0 4px;
+        cursor: pointer;
+
+        &.active {
+          font-weight: bold;
+          color: #247b7b;
+        }
+      }
+    }
+  }
+}

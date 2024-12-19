@@ -16,7 +16,11 @@ const Dashboard = () => {
       <h1>Dashboard</h1>
 
       <div className={styles.metricCardContainer}>
-        <MetricCard image={usersIcon} title="Users" value={data?.length} />
+        <MetricCard
+          image={usersIcon}
+          title="Users"
+          value={data ? data?.length : 0}
+        />
 
         <MetricCard
           image={activeUsersIcon}

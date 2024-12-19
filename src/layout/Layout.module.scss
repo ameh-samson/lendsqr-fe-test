@@ -5,7 +5,8 @@
     "sidebar main";
   grid-template-columns: 283px 1fr;
   grid-template-rows: auto 1fr;
-  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
 
   .content {
     display: contents;
@@ -21,7 +22,7 @@
   .mainContent {
     grid-area: main;
     overflow-y: auto;
-    padding-block: 3.75em 2em;
+    padding-block: 2em;
     padding-inline: 3.75em 1.88em;
   }
 }
