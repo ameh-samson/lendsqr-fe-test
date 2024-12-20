@@ -70,31 +70,31 @@ const Datatable = () => {
             <thead>
               <tr>
                 <th>
-                  <div>
+                  <div onClick={() => {}}>
                     <span>Organization</span>
                     <img src={filter} alt="filter" />
                   </div>
                 </th>
                 <th>
-                  <div>
+                  <div onClick={() => {}}>
                     <span>Username</span>
                     <img src={filter} alt="filter" />
                   </div>
                 </th>
                 <th>
-                  <div>
+                  <div onClick={() => {}}>
                     <span>Email</span>
                     <img src={filter} alt="filter" />
                   </div>
                 </th>
                 <th>
-                  <div>
+                  <div onClick={() => {}}>
                     <span>Phone Number</span>
                     <img src={filter} alt="filter" />
                   </div>
                 </th>
                 <th>
-                  <div>
+                  <div onClick={() => {}}>
                     <span>Date Joined</span>
                     <img src={filter} alt="filter" />
                   </div>
