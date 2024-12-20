@@ -49,6 +49,7 @@ export interface UserType {
     email: string;
     phone: string;
     address: string;
+    relationship: string;
   };
 }
 
@@ -81,4 +82,29 @@ export interface UserDetailsCardType {
   mainIncome: string;
   bvn: string;
   bank: string;
+}
+
+export interface otherDetailsType {
+  name: string;
+  number: string;
+  levelOfEdu: string;
+  gender: string;
+  email: string;
+  maritalStatus: string;
+  children: string;
+  typeOfResidence: string;
+  employmentStatus: string;
+  employmentSector: string;
+  bvn: string;
+  employmentDuration: string;
+  officialEmail: string;
+  monthlyIncome: string;
+  loanPayment: number;
+  twitter: string;
+  facebook: string;
+  instagram: string;
+  guarantorName: string;
+  guarantorPhoneNumber: string;
+  guarantorEmail: string;
+  guarantorRelationship: string;
 }

@@ -21,8 +21,8 @@
       .details {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
+        column-gap: 1em;
         margin-bottom: 1.88em;
-        gap: 1em;
 
         div {
           P {

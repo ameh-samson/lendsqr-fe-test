@@ -1,6 +1,8 @@
+import { otherDetailsType } from "@/types";
 import styles from "./OtherDetails.module.scss";
+import { FC } from "react";
 
-const OtherDetails = ({
+const OtherDetails: FC<otherDetailsType> = ({
   name,
   number,
   email,
