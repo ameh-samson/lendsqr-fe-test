@@ -1,0 +1,43 @@
+.otherDetailsContainer {
+  padding: 1.88em;
+  background: white;
+  color: #545f7d;
+
+  .sectionContainer {
+    .subsectionTitle {
+      font-weight: 500;
+      text-transform: capitalize;
+      margin-block: 1.88em;
+      font-size: 1em;
+    }
+
+    .firstSectionTitle {
+      margin-top: 0;
+    }
+
+    .detailsContainer {
+      border-bottom: 1px solid #e0e0e0;
+
+      .details {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        margin-bottom: 1.88em;
+        gap: 1em;
+
+        div {
+          P {
+            &:nth-of-type(1) {
+              text-transform: uppercase;
+              font-size: 0.75em;
+              margin-bottom: 0.5em;
+            }
+            &:nth-of-type(2) {
+              font-weight: 500;
+              font-size: 1em;
+            }
+          }
+        }
+      }
+    }
+  }
+}

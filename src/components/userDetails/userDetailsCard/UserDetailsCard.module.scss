@@ -1,0 +1,91 @@
+.userDetailsCardContainer {
+  background: white;
+  padding: 1.88em 1.88em 0 1.88em;
+  border-radius: 4px;
+
+  .id,
+  .rating,
+  .bvnBank {
+    margin-top: 0.5em;
+  }
+
+  .nameAndId,
+  .ratingContainer {
+    border-right: 1px solid #e0e0e0;
+    padding-right: 1.25em;
+  }
+
+  .name {
+    font-size: 1.38em;
+    color: #213f7d;
+    font-weight: 500;
+  }
+
+  .userDetailsCardInner {
+    display: flex;
+    align-items: center;
+    gap: 1.25em;
+
+    .avatar {
+      height: 100px;
+      width: 100px;
+      border-radius: 100px;
+    }
+
+    .nameAndId {
+      span {
+        display: block;
+      }
+
+      .id {
+        color: #545f7d;
+        font-size: 0.88em;
+      }
+    }
+
+    .ratingContainer {
+      span {
+        color: #545f7d;
+        font-size: 0.88em;
+        font-weight: 500;
+      }
+
+      .rating {
+        display: flex;
+        align-items: center;
+        gap: 0.25em;
+
+        img {
+          height: 16px;
+          width: 16px;
+        }
+      }
+    }
+
+    .incomeContainer {
+      p {
+        color: #213f7d;
+      }
+
+      .bvnBank {
+        font-size: 0.75em;
+      }
+    }
+  }
+
+  .buttonsContainer {
+    margin-top: 3.19em;
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      border-bottom: 1px solid white;
+      padding-bottom: 0.63em;
+
+      &:nth-of-type(1) {
+        color: #39cdcc;
+        border-bottom: 2px solid #39cdcc;
+      }
+    }
+  }
+}

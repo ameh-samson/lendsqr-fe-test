@@ -9,7 +9,7 @@ import blacklistIcon from "@/assets/svg/blacklist.svg";
 import activateIcon from "@/assets/svg/activate-user.svg";
 
 const Datatable = () => {
-  const [activeDropdownId, setActiveDropdownId] = useState<number | null>(null);
+  const [activeDropdownId, setActiveDropdownId] = useState<string | null>(null);
   const { data } = useDashboardContext();
   const [page, setPage] = useState(1);
   const [recordsPerPage, setRecordsPerPage] = useState(10);
@@ -54,11 +54,11 @@ const Datatable = () => {
     setPage(1);
   };
 
-  const toggleDropdown = (id: number) => {
+  const toggleDropdown = (id: string) => {
     setActiveDropdownId((prevId) => (prevId === id ? null : id));
   };
 
-  const handleViewDetails = (userId: number) => {
+  const handleViewDetails = (userId: string) => {
     navigate(`/user/${userId}`);
   };
 

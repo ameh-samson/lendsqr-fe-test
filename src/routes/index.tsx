@@ -10,7 +10,7 @@ const RouteConfig = () => {
       <Route path="/" index element={<Home />} />
       <Route path="/dashboard" index element={<Dashboard />} />
       <Route path="/users" index element={<Users />} />
-      <Route path="/user/:id" index element={<UserDetails />} />
+      <Route path="/user/:userId" index element={<UserDetails />} />
     </Routes>
   );
 };

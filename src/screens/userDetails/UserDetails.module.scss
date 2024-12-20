@@ -1,6 +1,7 @@
 @use "@/scss/colors";
 
 .userdetails {
+  position: relative;
   .backButton {
     display: flex;
     align-items: center;
@@ -45,5 +46,9 @@
         border: 1px solid #39cdcc;
       }
     }
+  }
+
+  .otherDetails {
+    margin-top: 1.88em;
   }
 }
