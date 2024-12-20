@@ -44,3 +44,34 @@
     }
   }
 }
+
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    gap: 1em;
+    position: relative;
+
+    .leftContainer {
+      width: 100%;
+      padding: 2em;
+
+      .logo {
+        width: 150px;
+        position: fixed;
+        top: 2em;
+        margin-bottom: 2.3em;
+        background: white;
+        border-radius: 4px;
+      }
+
+      .loginImage {
+        margin-top: 4em;
+      }
+    }
+
+    .rightContainer {
+      padding: 2em;
+      width: 100%;
+    }
+  }
+}
