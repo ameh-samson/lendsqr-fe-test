@@ -108,13 +108,14 @@ lendsqr-fe-test/
 
 ## Technologies Used
 
-Vite: A modern, fast build tool and development server.
-React: JavaScript library for building user interfaces.
-React Router: For handling routing in React applications.
-SCSS: CSS preprocessor for styling the application.
-TypeScript: A superset of JavaScript that provides optional static typing.
-Vitest: Vite-native testing framework.
-TanStack Query: Data fetching and state management for React.
+- **Vite**: A modern, fast build tool and development server.
+- **React**: JavaScript library for building user interfaces.
+- **React Router**: For handling routing in React applications.
+- **SCSS**: CSS preprocessor for styling the application.
+- **TypeScript**: A superset of JavaScript that provides optional static typing.
+- **Vitest**: Vite-native testing framework.
+- **TanStack Query**: Data fetching and state management for React.
+- **React Toastify**: for handling alerts
 
 ## Custom Configuration
 

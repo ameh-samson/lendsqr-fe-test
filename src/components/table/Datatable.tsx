@@ -8,6 +8,8 @@ import eyeIcon from "@/assets/svg/eye.svg";
 import blacklistIcon from "@/assets/svg/blacklist.svg";
 import activateIcon from "@/assets/svg/activate-user.svg";
 import FilterForm from "@/components/filterform/FilterForm";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Datatable = () => {
   const [activeDropdownId, setActiveDropdownId] = useState<string | null>(null);
@@ -64,8 +66,16 @@ const Datatable = () => {
     navigate(`/user/${userId}`);
   };
 
+  const handleBlacklistUser = () => {
+    toast.error("User has been blacklisted.");
+  };
+
+  const handleActivateUser = () => {
+    toast.success("User has been activated.");
+  };
+
   const handleFilterButtonClick = () => {
-    setShowFilterForm(!showFilterForm); // Toggle filter form visibility
+    setShowFilterForm(!showFilterForm);
   };
 
   return (
@@ -73,6 +83,13 @@ const Datatable = () => {
       <div className={styles.datatableContainer}>
         <div className={styles.table}>
           <table>
+            <ToastContainer
+              style={{
+                marginTop: "20vh",
+                marginLeft: "16px",
+                marginRight: "32px",
+              }}
+            />
             <thead>
               <tr>
                 <th>
@@ -150,11 +167,21 @@ const Datatable = () => {
                         <img src={eyeIcon} alt="" /> View Details
                       </button>
 
-                      <button onClick={() => toggleDropdown(user.id)}>
+                      <button
+                        onClick={() => {
+                          toggleDropdown(user.id);
+                          handleBlacklistUser();
+                        }}
+                      >
                         <img src={blacklistIcon} alt="" /> Blacklist User
                       </button>
 
-                      <button onClick={() => toggleDropdown(user.id)}>
+                      <button
+                        onClick={() => {
+                          toggleDropdown(user.id);
+                          handleActivateUser();
+                        }}
+                      >
                         <img src={activateIcon} alt="" /> Activate User
                       </button>
                     </div>

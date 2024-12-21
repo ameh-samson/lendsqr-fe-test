@@ -4,6 +4,8 @@ import backIcon from "@/assets/svg/back-icon.svg";
 import UserDetailsCard from "@/components/userDetails/userDetailsCard/UserDetailsCard";
 import { useDashboardContext } from "@/context/DashboardContext";
 import { Link, useParams } from "react-router-dom";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const UserDetails = () => {
   const { data } = useDashboardContext();
@@ -43,8 +45,23 @@ const UserDetails = () => {
     loan_repayment,
   } = education_and_employment;
 
+  const handleBlacklistUser = () => {
+    toast.error("User has been blacklisted.");
+  };
+
+  const handleActivateUser = () => {
+    toast.success("User has been activated.");
+  };
+
   return (
     <section className={styles.userdetails}>
+      <ToastContainer
+        style={{
+          marginTop: "15vh",
+          marginLeft: "16px",
+          marginRight: "32px",
+        }}
+      />
       <Link to="/users" className={styles.backButton}>
         <img src={backIcon} alt="back" />
         <span>Back to Users</span>
@@ -54,8 +71,8 @@ const UserDetails = () => {
         <h1>User Details</h1>
 
         <div>
-          <button>Blacklist User</button>
-          <button>Activate User</button>
+          <button onClick={handleBlacklistUser}>Blacklist User</button>
+          <button onClick={handleActivateUser}>Activate User</button>
         </div>
       </div>
 
