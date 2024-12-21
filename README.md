@@ -68,34 +68,43 @@ npm run serve
 
 ## Folder Structure
 
+```bash
+
 lendsqr-fe-test/
-├── public/ # Public assets
-│ └── index.html # HTML template
-├── src/ # Source files
-│ ├── assets/ # Assets such as images and icons
-│ │ └── svg/ # SVG icons
-│ │ ├── action-dots.svg
-│ │ ├── activate-user.svg
-│ │ ├── blacklist.svg
-│ │ ├── eye.svg
-│ │ └── filter-results-button.svg
-│ ├── components/ # React components
-│ │ └── table/ # Table components
-│ │ ├── Datatable.module.scss
-│ │ └── Datatable.tsx
-│ ├── context/ # Context providers
-│ │ └── DashboardContext.tsx
-│ ├── scss/ # SCSS files
-│ │ └── colors.scss
-│ ├── App.tsx # Main App component
-│ ├── index.tsx # Entry point for React
-│ └── vite-env.d.ts # Vite environment types
-├── .gitignore # Git ignore file
-├── index.html # HTML template
-├── package.json # NPM package configuration
-├── tsconfig.json # TypeScript configuration
-├── vite.config.ts # Vite configuration
-└── README.md # Project documentation
+├── public/                   # Public assets
+│   └── index.html            # HTML template
+├── src/                      # Source files
+│   ├── assets/               # Assets such as images and icons
+│   │   └── svg/              # SVG icons
+│   ├── components/           # React components
+│   │   ├── table/            # Table components
+│   │   │   ├── Datatable.module.scss
+│   │   │   └── Datatable.tsx
+│   │   └── otherComponent/   # Other components
+│   │       ├── Component.module.scss
+│   │       └── Component.tsx
+│   ├── context/              # Context providers
+│   │   └── DashboardContext.tsx
+│   ├── schemas/              # data validation schemas
+│   │   └── form schema
+│   ├── scss/                 # SCSS files
+│   │   ├── colors.scss
+│   │   └── main.scss
+│   ├── tests/                # test setup
+│   │    └── setup.ts
+│   ├── types/                # TypeScript type definitions
+│   │    └── index.ts
+│   ├── App.tsx               # Main App component
+│   ├── main.tsx             # Entry point for React
+│   └── vite-env.d.ts         # Vite environment types
+├── .gitignore                # Git ignore file
+├── index.html                # HTML template
+├── package.json              # NPM package configuration
+├── tsconfig.json             # TypeScript configuration
+├── vite.config.ts            # Vite configuration
+├── vitest.config.ts          # Vitest configuration
+└── README.md                 # Project documentation
+```
 
 ## Technologies Used
 
@@ -138,7 +147,13 @@ This project uses Vitest for testing. To run the tests, use the following comman
 npm run test
 ```
 
-## Setting Up Vitest
+## Setting Up Vitest for new project
+
+### install vitest
+
+```bash
+npm install -D vitest
+```
 
 Vitest is configured for testing in this project. You can modify or add test configurations in the vitest.config.ts file if needed.
 
