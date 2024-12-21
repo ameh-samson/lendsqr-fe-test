@@ -52,6 +52,7 @@ div {
 
         tbody {
           font-size: 14px;
+          position: relative;
 
           tr {
             position: relative;
@@ -95,6 +96,11 @@ div {
                 display: none;
               }
             }
+          }
+
+          .filterFormContainer {
+            position: absolute;
+            top: 0;
           }
         }
 

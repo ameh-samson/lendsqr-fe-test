@@ -8,8 +8,6 @@ export const useAppState = () => {
     queryFn: fetchUsers,
   });
 
-  console.log(data);
-
   // Calculate metrics when data is available
   const activeUsers =
     data?.filter((user: UserType) => user.status === "Active") || [];

@@ -1,0 +1,65 @@
+.filterForm {
+  background: white;
+  padding: 1.88em 1.25em;
+  width: 270px;
+  border: 1px solid #545f7d24;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  height: 37vh;
+  overflow-y: auto;
+
+  form {
+    .formFieldContainer {
+      display: flex;
+      flex-direction: column;
+
+      label {
+        font-weight: 500;
+        font-size: 0.88em;
+        color: #545f7d;
+        margin-bottom: 0.34em;
+      }
+    }
+
+    .buttonsContainer {
+      display: flex;
+      align-items: center;
+      gap: 0.88em;
+      margin-top: 1.88em;
+
+      button {
+        padding: 0.75em 1.88em;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 0.88em;
+
+        &:nth-of-type(1) {
+          border: 1px solid #545f7d;
+          color: #545f7d;
+        }
+
+        &:nth-of-type(2) {
+          background: #39cdcc;
+          color: white;
+        }
+      }
+    }
+  }
+
+  select,
+  input {
+    color: #545f7d;
+    padding: 0.75em 1.25em;
+    margin-bottom: 1.25em;
+    border: 1px solid #545f7d26;
+    border-radius: 4px;
+    background: white;
+    transition: border-color 0.3s ease;
+    font-size: 0.88em;
+  }
+
+  select:focus,
+  input:focus {
+    outline: none;
+  }
+}

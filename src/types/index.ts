@@ -108,3 +108,12 @@ export interface otherDetailsType {
   guarantorEmail: string;
   guarantorRelationship: string;
 }
+
+export interface FilterFormFilteredType {
+  organization?: string;
+  username?: string;
+  email?: string;
+  date?: string;
+  phone?: string;
+  status?: "active" | "inactive" | "blacklisted";
+}

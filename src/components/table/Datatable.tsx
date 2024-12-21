@@ -7,12 +7,14 @@ import actionDots from "@/assets/svg/action-dots.svg";
 import eyeIcon from "@/assets/svg/eye.svg";
 import blacklistIcon from "@/assets/svg/blacklist.svg";
 import activateIcon from "@/assets/svg/activate-user.svg";
+import FilterForm from "@/components/filterform/FilterForm";
 
 const Datatable = () => {
   const [activeDropdownId, setActiveDropdownId] = useState<string | null>(null);
   const { data } = useDashboardContext();
   const [page, setPage] = useState(1);
   const [recordsPerPage, setRecordsPerPage] = useState(10);
+  const [showFilterForm, setShowFilterForm] = useState(false);
 
   const navigate = useNavigate();
 
@@ -62,6 +64,10 @@ const Datatable = () => {
     navigate(`/user/${userId}`);
   };
 
+  const handleFilterButtonClick = () => {
+    setShowFilterForm(!showFilterForm); // Toggle filter form visibility
+  };
+
   return (
     <div>
       <div className={styles.datatableContainer}>
@@ -70,31 +76,31 @@ const Datatable = () => {
             <thead>
               <tr>
                 <th>
-                  <div onClick={() => {}}>
+                  <div onClick={handleFilterButtonClick}>
                     <span>Organization</span>
                     <img src={filter} alt="filter" />
                   </div>
                 </th>
                 <th>
-                  <div onClick={() => {}}>
+                  <div onClick={handleFilterButtonClick}>
                     <span>Username</span>
                     <img src={filter} alt="filter" />
                   </div>
                 </th>
                 <th>
-                  <div onClick={() => {}}>
+                  <div onClick={handleFilterButtonClick}>
                     <span>Email</span>
                     <img src={filter} alt="filter" />
                   </div>
                 </th>
                 <th>
-                  <div onClick={() => {}}>
+                  <div onClick={handleFilterButtonClick}>
                     <span>Phone Number</span>
                     <img src={filter} alt="filter" />
                   </div>
                 </th>
                 <th>
-                  <div onClick={() => {}}>
+                  <div onClick={handleFilterButtonClick}>
                     <span>Date Joined</span>
                     <img src={filter} alt="filter" />
                   </div>
@@ -155,6 +161,10 @@ const Datatable = () => {
                   </td>
                 </tr>
               ))}
+
+              <div className={styles.filterFormContainer}>
+                {showFilterForm && <FilterForm />}
+              </div>
             </tbody>
           </table>
         </div>
