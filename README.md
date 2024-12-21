@@ -68,7 +68,34 @@ npm run serve
 
 ## Folder Structure
 
-lendsqr-fe-test/ ├── public/ # Public assets │ └── index.html # HTML template ├── src/ # Source files │ ├── assets/ # Assets such as images and icons │ │ └── svg/ # SVG icons │ │ ├── action-dots.svg │ │ ├── activate-user.svg │ │ ├── blacklist.svg │ │ ├── eye.svg │ │ └── filter-results-button.svg │ ├── components/ # React components │ │ └── table/ # Table components │ │ ├── Datatable.module.scss │ │ └── Datatable.tsx │ ├── context/ # Context providers │ │ └── DashboardContext.tsx │ ├── scss/ # SCSS files │ │ └── colors.scss │ ├── App.tsx # Main App component │ ├── index.tsx # Entry point for React │ └── vite-env.d.ts # Vite environment types ├── .gitignore # Git ignore file ├── index.html # HTML template ├── package.json # NPM package configuration ├── tsconfig.json # TypeScript configuration ├── vite.config.ts # Vite configuration └── README.md
+lendsqr-fe-test/
+├── public/ # Public assets
+│ └── index.html # HTML template
+├── src/ # Source files
+│ ├── assets/ # Assets such as images and icons
+│ │ └── svg/ # SVG icons
+│ │ ├── action-dots.svg
+│ │ ├── activate-user.svg
+│ │ ├── blacklist.svg
+│ │ ├── eye.svg
+│ │ └── filter-results-button.svg
+│ ├── components/ # React components
+│ │ └── table/ # Table components
+│ │ ├── Datatable.module.scss
+│ │ └── Datatable.tsx
+│ ├── context/ # Context providers
+│ │ └── DashboardContext.tsx
+│ ├── scss/ # SCSS files
+│ │ └── colors.scss
+│ ├── App.tsx # Main App component
+│ ├── index.tsx # Entry point for React
+│ └── vite-env.d.ts # Vite environment types
+├── .gitignore # Git ignore file
+├── index.html # HTML template
+├── package.json # NPM package configuration
+├── tsconfig.json # TypeScript configuration
+├── vite.config.ts # Vite configuration
+└── README.md # Project documentation
 
 ## Technologies Used
 
