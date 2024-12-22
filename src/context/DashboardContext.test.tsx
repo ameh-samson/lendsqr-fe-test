@@ -20,6 +20,8 @@ describe("ContextProvider and useDashboardContext", () => {
         { id: 1, status: "Active", hasLoan: true, hasSavings: false },
       ],
       usersWithSavings: [],
+      toggleSidebar: true, // Set a boolean value
+      setToggleSidebar: vi.fn(),
     };
 
     vi.mocked(useAppState).mockReturnValue(mockState);
@@ -43,7 +45,7 @@ describe("ContextProvider and useDashboardContext", () => {
 
   it("should throw an error when useDashboardContext is used outside of ContextProvider", () => {
     const TestComponent = () => {
-      useDashboardContext(); 
+      useDashboardContext();
       return null;
     };
 
