@@ -1,15 +1,37 @@
 import { fetchUsers } from "@/configurations/fetchUsers";
 import { UserType } from "@/types";
 import { useQuery } from "@tanstack/react-query";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export const useAppState = () => {
   const [toggleSidebar, setToggleSidebar] = useState<boolean>(false);
+  const [localData, setLocalData] = useState<UserType[] | null>(null);
 
-  const { data } = useQuery({
+  // Load data from localStorage when the component initializes
+  useEffect(() => {
+    const storedData = localStorage.getItem("myData");
+    if (storedData) {
+      setLocalData(JSON.parse(storedData));
+    }
+  }, []);
+
+  // Fetch data using Tanstack Query
+  const { data: fetchedData, isSuccess } = useQuery({
     queryKey: ["users"],
     queryFn: fetchUsers,
   });
+
+  // Update localStorage and localData when fetch is successful
+  useEffect(() => {
+    if (isSuccess && fetchedData) {
+      localStorage.setItem("myData", JSON.stringify(fetchedData));
+      setLocalData(fetchedData);
+    }
+  }, [isSuccess, fetchedData]);
+
+  console.log(localData);
+  // Use localData as the primary data source
+  const data = localData || fetchedData;
 
   // Calculate metrics when data is available
   const activeUsers =
