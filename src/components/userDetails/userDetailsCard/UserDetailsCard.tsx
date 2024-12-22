@@ -53,11 +53,11 @@ const UserDetailsCard: FC<UserDetailsCardType> = ({
 
       <div className={styles.buttonsContainer}>
         <button>General Details</button>
-        <button disabled>Documents</button>
-        <button disabled>Bank Details</button>
-        <button disabled>Loans</button>
-        <button disabled>Savings</button>
-        <button disabled>App and System</button>
+        <button>Documents</button>
+        <button>Bank Details</button>
+        <button>Loans</button>
+        <button>Savings</button>
+        <button>App and System</button>
       </div>
     </div>
   );
