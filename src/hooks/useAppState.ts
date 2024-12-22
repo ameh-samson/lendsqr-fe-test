@@ -29,7 +29,6 @@ export const useAppState = () => {
     }
   }, [isSuccess, fetchedData]);
 
-  console.log(localData);
   // Use localData as the primary data source
   const data = localData || fetchedData;
 
