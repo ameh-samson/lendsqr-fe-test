@@ -23,6 +23,10 @@ div {
           height: 16px;
           z-index: 100;
           overflow-x: hidden;
+
+          @media (max-width: 640px) {
+            font-size: 10px;
+          }
         }
 
         th,
@@ -54,6 +58,10 @@ div {
         tbody {
           font-size: 14px;
           position: relative;
+
+          @media (max-width: 640px) {
+            font-size: 12px;
+          }
 
           tr {
             position: relative;
@@ -127,7 +135,6 @@ div {
       background: none;
       border: none;
       cursor: pointer;
-      font-size: 16px;
 
       img {
         width: unset;
@@ -137,10 +144,18 @@ div {
 
   .paginationContainer {
     display: flex;
+    gap: 2em;
     justify-content: space-between;
     align-items: center;
     margin-top: 1.25em;
     color: #545f7d;
+    font-size: 1em;
+
+    @media (max-width: 640px) {
+      flex-direction: column;
+      align-items: start;
+      font-size: 0.88em;
+    }
 
     .recordsPerPage {
       select {
@@ -183,16 +198,14 @@ div {
           background: #247b7b;
           color: #fff;
         }
-      }
 
-      .page-number {
-        padding: 8px 12px;
-        margin: 0 4px;
-        cursor: pointer;
+        @media (max-width: 640px) {
+          font-size: 0.75em;
+        }
 
-        &.active {
-          font-weight: bold;
-          color: #247b7b;
+        &:first-of-type,
+        &:last-of-type {
+          background: #e5e8ee;
         }
       }
     }
