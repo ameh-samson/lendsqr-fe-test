@@ -21,9 +21,12 @@
 
   .mainContent {
     grid-area: main;
-    overflow-y: auto;
+    overflow-y: scroll;
     padding-block: 2em;
     padding-inline: 3.75em 1.88em;
+    width: 100%;
+
+    scrollbar-width: none;
 
     @media (max-width: 900px) {
       padding-inline: 1.88em;
