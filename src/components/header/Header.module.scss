@@ -114,6 +114,11 @@
     .menuIcon {
       display: block;
       font-size: 1.2em;
+      color: #000000cc;
+
+      &:hover {
+        color: #545f7d;
+      }
     }
 
     .searchBar {
