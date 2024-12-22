@@ -77,7 +77,7 @@ export interface metricCardDataType {
 }
 
 export interface UserDetailsCardType {
-  avatar: string;
+  avatar?: string;
   name: string;
   id: string;
   userTier: number;
