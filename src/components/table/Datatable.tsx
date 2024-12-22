@@ -82,14 +82,14 @@ const Datatable = () => {
     <div>
       <div className={styles.datatableContainer}>
         <div className={styles.table}>
+          <ToastContainer
+            style={{
+              marginTop: "20vh",
+              marginLeft: "16px",
+              marginRight: "32px",
+            }}
+          />
           <table>
-            <ToastContainer
-              style={{
-                marginTop: "20vh",
-                marginLeft: "16px",
-                marginRight: "32px",
-              }}
-            />
             <thead>
               <tr>
                 <th>
@@ -188,17 +188,17 @@ const Datatable = () => {
                   </td>
                 </tr>
               ))}
-
-              <div className={styles.filterFormContainer}>
-                {showFilterForm && <FilterForm />}
-              </div>
             </tbody>
           </table>
         </div>
+        {showFilterForm && (
+          <div className={styles.filterFormContainer}>
+            <FilterForm />
+          </div>
+        )}
       </div>
 
       {/* Pagination */}
-
       <div className={styles.paginationContainer}>
         <div className={styles.recordsPerPage}>
           <span>Showing </span>
