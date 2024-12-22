@@ -58,7 +58,7 @@ const UserDetails = () => {
       <ToastContainer
         style={{
           marginTop: "15vh",
-          marginLeft: "16px",
+          marginLeft: "32px",
           marginRight: "32px",
         }}
       />

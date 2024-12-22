@@ -197,6 +197,8 @@ const Datatable = () => {
         </div>
       </div>
 
+      {/* Pagination */}
+
       <div className={styles.paginationContainer}>
         <div className={styles.recordsPerPage}>
           <span>Showing </span>

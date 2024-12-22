@@ -25,6 +25,7 @@
     display: flex;
     align-items: center;
     gap: 1.25em;
+    flex-wrap: wrap;
 
     .avatar {
       height: 100px;
@@ -76,7 +77,13 @@
   .buttonsContainer {
     margin-top: 3.19em;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+
+    @media (max-width: 1024px) {
+      gap: 1em;
+      justify-content: start;
+    }
 
     button {
       border-bottom: 1px solid white;

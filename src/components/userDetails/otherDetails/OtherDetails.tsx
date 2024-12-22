@@ -60,9 +60,7 @@ const OtherDetails: FC<otherDetailsType> = ({
               <p>Gender</p>
               <p>{gender}</p>
             </div>
-          </div>
 
-          <div className={styles.details}>
             <div>
               <p>Marital status</p>
               <p>{maritalStatus}</p>
@@ -111,9 +109,7 @@ const OtherDetails: FC<otherDetailsType> = ({
               <p>Duration of employment</p>
               <p>{employmentDuration}</p>
             </div>
-          </div>
 
-          <div className={styles.details}>
             <div>
               <p>office email</p>
               <p>{officialEmail}</p>
