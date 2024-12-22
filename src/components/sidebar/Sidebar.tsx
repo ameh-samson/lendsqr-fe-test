@@ -10,12 +10,15 @@ import {
   customersRelatedNavlink,
   settingsRelatedNavlink,
 } from "@/constants";
+import { useDashboardContext } from "@/context/DashboardContext";
 
 const Sidebar = () => {
   const location = useLocation();
   const currentPath = location.pathname;
 
   const isActive = (path: string) => currentPath === path;
+
+  const { toggleSidebar, setToggleSidebar } = useDashboardContext();
   return (
     <aside className={styles.aside}>
       <Link to="#" className={styles.organization}>
@@ -29,6 +32,7 @@ const Sidebar = () => {
         className={`${styles.dashboard} ${
           isActive("/dashboard") ? styles.active : ""
         }`}
+        onClick={() => setToggleSidebar(!toggleSidebar)}
       >
         <img src={home} alt="home" />
         <span>Dashboard</span>
@@ -43,6 +47,7 @@ const Sidebar = () => {
             className={`${styles.navLink} ${
               isActive(link.href) ? styles.active : ""
             }`}
+            onClick={() => setToggleSidebar(!toggleSidebar)}
           >
             <img src={link.icon} alt={link.title} />
             <span>{link.title}</span>
@@ -59,6 +64,7 @@ const Sidebar = () => {
             className={`${styles.navLink} ${
               isActive(link.href) ? styles.active : ""
             }`}
+            onClick={() => setToggleSidebar(!toggleSidebar)}
           >
             <img src={link.icon} alt={link.title} />
             <span>{link.title}</span>
@@ -75,6 +81,7 @@ const Sidebar = () => {
             className={`${styles.navLink} ${
               isActive(link.href) ? styles.active : ""
             }`}
+            onClick={() => setToggleSidebar(!toggleSidebar)}
           >
             <img src={link.icon} alt={link.title} />
             <span>{link.title}</span>
@@ -82,7 +89,10 @@ const Sidebar = () => {
         ))}
       </section>
       <section className={styles.signoutSection}>
-        <button className={styles.signout}>
+        <button
+          className={styles.signout}
+          onClick={() => setToggleSidebar(!toggleSidebar)}
+        >
           <img src={signoutIcon} alt="signout" />
           <span>Logout</span>
         </button>

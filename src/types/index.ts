@@ -58,6 +58,8 @@ export interface AppContextType {
   activeUsers: UserType[];
   usersWithLoans: UserType[];
   usersWithSavings: UserType[];
+  toggleSidebar: boolean;
+  setToggleSidebar: (value: boolean) => void;
 }
 
 export type LoginFormType = z.infer<typeof loginFormSchema>;

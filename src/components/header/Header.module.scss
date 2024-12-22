@@ -12,6 +12,10 @@
   justify-content: space-between;
   align-items: center;
 
+  .menuIcon {
+    display: none;
+  }
+
   .logo {
     width: 144px;
   }
@@ -22,6 +26,10 @@
     width: 100%;
     max-width: 500px;
     position: relative;
+
+    @media (max-width: 900px) {
+      display: none;
+    }
 
     .inputField {
       flex: 1;
@@ -93,6 +101,27 @@
       .dropdown {
         width: 20px;
       }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .header {
+    .logo {
+      width: 100px;
+    }
+
+    .menuIcon {
+      display: block;
+      font-size: 1.2em;
+    }
+
+    .searchBar {
+      width: 50%;
+    }
+
+    .profileContainer {
+      display: none;
     }
   }
 }

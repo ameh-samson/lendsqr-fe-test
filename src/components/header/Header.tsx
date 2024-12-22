@@ -1,14 +1,23 @@
 import { Link } from "react-router-dom";
+import { FaBars } from "react-icons/fa";
 import styles from "./Header.module.scss";
 import logo from "@/assets/svg/logo.svg";
 import searchIon from "@/assets/svg/search-icon.svg";
 import notificationIcon from "@/assets/png/notification.png";
 import avatar from "@/assets/png/avatar.png";
 import dropdown from "@/assets/svg/arrow-down.svg";
+import { useDashboardContext } from "@/context/DashboardContext";
 
 const Header = () => {
+  const { toggleSidebar, setToggleSidebar } = useDashboardContext();
+
   return (
     <header className={styles.header}>
+      <FaBars
+        className={styles.menuIcon}
+        onClick={() => setToggleSidebar(!toggleSidebar)}
+      />
+
       <Link to="/">
         <img src={logo} alt="logo" className={styles.logo} />
       </Link>

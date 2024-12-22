@@ -26,3 +26,22 @@
     padding-inline: 3.75em 1.88em;
   }
 }
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-areas:
+      "header header"
+      "main main";
+  }
+
+  .showSidebar {
+    position: absolute;
+    height: 80vh;
+    top: 100px;
+    z-index: 1000;
+  }
+
+  .hideSidebar {
+    display: none;
+  }
+}
