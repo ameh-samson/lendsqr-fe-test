@@ -45,7 +45,7 @@ const Dashboard = () => {
         <Link to="/users" className={styles.linkCard}>
           Manage Users
         </Link>
-        <Link to="/" className={styles.linkCard}>
+        <Link to="/reports" className={styles.linkCard}>
           View Reports
         </Link>
       </div>

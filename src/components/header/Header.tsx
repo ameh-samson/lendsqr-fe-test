@@ -7,9 +7,15 @@ import notificationIcon from "@/assets/png/notification.png";
 import avatar from "@/assets/png/avatar.png";
 import dropdown from "@/assets/svg/arrow-down.svg";
 import { useDashboardContext } from "@/context/DashboardContext";
+import profuleMenuAtionDots from "@/assets/svg/action-dots.svg";
 
 const Header = () => {
-  const { toggleSidebar, setToggleSidebar } = useDashboardContext();
+  const {
+    toggleSidebar,
+    setToggleSidebar,
+    showProfileMenu,
+    setShowProfileMenu,
+  } = useDashboardContext();
 
   return (
     <header className={styles.header}>
@@ -33,7 +39,11 @@ const Header = () => {
         </button>
       </div>
 
-      <div className={styles.profileContainer}>
+      <div
+        className={`${styles.profileContainer}  ${
+          showProfileMenu ? styles.showProfileContainer : ""
+        }`}
+      >
         <a href="#">Docs</a>
 
         <div className={styles.profileDetails}>
@@ -46,6 +56,13 @@ const Header = () => {
           <span>Adedeji</span>
           <img src={dropdown} alt="dropdown" className={styles.dropdown} />
         </div>
+      </div>
+
+      <div
+        className={styles.profileMenu}
+        onClick={() => setShowProfileMenu(!showProfileMenu)}
+      >
+        <img src={profuleMenuAtionDots} alt="profileMenu" />
       </div>
     </header>
   );

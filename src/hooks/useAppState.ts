@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 export const useAppState = () => {
   const [toggleSidebar, setToggleSidebar] = useState<boolean>(false);
   const [localData, setLocalData] = useState<UserType[] | null>(null);
+  const [showProfileMenu, setShowProfileMenu] = useState<boolean>(false);
 
   // Load data from localStorage when the component initializes
   useEffect(() => {
@@ -46,6 +47,8 @@ export const useAppState = () => {
     usersWithSavings,
     toggleSidebar,
     setToggleSidebar,
+    showProfileMenu,
+    setShowProfileMenu,
   };
 
   return value;
