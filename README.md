@@ -177,4 +177,4 @@ export default defineConfig({
 
 ## License
 
-This `README.md` provides a comprehensive overview of the project setup, features, and how to get started with development, testing, and deployment. Let me know if you need further modifications!
+This `README.md` provides a comprehensive overview of the project setup, features, and how to get started with development, testing, and deployment. Also, you can access the project documentation [here](https://docs.google.com/document/d/1ZkHEcmqr9bYu7gIQ2hbTnwgDiMIYuSP-OcWE0JfbIpY/edit?usp=sharing) Let me know if you need further modifications!
