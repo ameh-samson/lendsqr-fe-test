@@ -50,22 +50,6 @@ npm run dev
 
 Now the project is running at http://localhost:5173
 
-## Production Build
-
-To build the project for production, use the following command:
-
-```bash
-npm run build
-```
-
-This command will bundle your project, optimize it for production, and generate static files in the dist directory.
-
-### Preview the Production Build
-
-```bash
-npm run serve
-```
-
 ## Folder Structure
 
 ```bash
