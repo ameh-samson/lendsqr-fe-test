@@ -10,7 +10,7 @@ vi.mock("@/hooks/useAppState", () => ({
 
 describe("ContextProvider and useDashboardContext", () => {
   it("should provide the correct context to child components", () => {
-    // Mock the useAppState hook to return some mock state
+    // Mock the useAppState hook to return the complete mock state
     const mockState = {
       data: [{ id: 1, status: "Active", hasLoan: true, hasSavings: false }],
       activeUsers: [
@@ -20,8 +20,10 @@ describe("ContextProvider and useDashboardContext", () => {
         { id: 1, status: "Active", hasLoan: true, hasSavings: false },
       ],
       usersWithSavings: [],
-      toggleSidebar: true, // Set a boolean value
+      toggleSidebar: true,
       setToggleSidebar: vi.fn(),
+      showProfileMenu: false,
+      setShowProfileMenu: vi.fn(),
     };
 
     vi.mocked(useAppState).mockReturnValue(mockState);
