@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const apiUrl = axios.create({
-  baseURL: "https://run.mocky.io/v3/4a6a46ee-335d-45c5-b897-5e7bfd89040f",
+  baseURL: "https://run.mocky.io/v3/350642f5-4fc3-421c-bfe9-b827b3861d85",
   headers: {
     Accept: "application/json",
     "Content-Type": "application/json",
